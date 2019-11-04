@@ -1,0 +1,98 @@
+@import '../../App.scss';
+
+.campaignItem {
+    margin: 7px;
+    min-width: 340px;
+    width: 50%;
+    max-width: 25%;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px -2px $shadow;
+    position: relative;
+    overflow: hidden;
+
+
+    //flex Attributes 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+
+    .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 105%;
+        z-index: -9;
+        filter: brightness(100%);
+    }
+
+    .logo {
+        align-self: center;
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+        background: $white;
+        box-shadow: 0px 4px 4px -2px $shadow;
+        margin-bottom: 10px;
+
+        //flex Attributes 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        img {
+            width: 80px;
+        }
+    }
+
+    .info {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+
+        //flex Attributes 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: flex-end;
+
+        .name {
+            flex: 1 1 auto;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 600;
+            color: $white;
+        }
+
+        .social {
+            margin-bottom: -5px;
+
+            //flex Attributes 
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-content: flex-end;
+            align-items: flex-end;
+
+            .svg {
+                img {
+                    height: 22px;
+                    margin-right: 4px;
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .cover {
+            filter: brightness(50%);
+        }
+    }
+}
